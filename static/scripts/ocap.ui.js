@@ -511,7 +511,7 @@ class UI {
 		var DateNewer = calendar1.value;
 		var DateOlder = calendar2.value;
 
-		return fetch(`/api/v1/operations?tag=${tag}&name=${name}&newer=${DateNewer}&older=${DateOlder}`, {
+		return fetch(`api/v1/operations?tag=${tag}&name=${name}&newer=${DateNewer}&older=${DateOlder}`, {
 			cache: "no-cache"
 		})
 			.then((response) => response.json())
@@ -677,8 +677,9 @@ class UI {
 				<option value="ru"${current_lang == "ru" ? 'selected/' : ''}>Русский</option>
 				<option value="en"${current_lang == "en" ? 'selected/' : ''}>English</option>
 				<option value="de"${current_lang == "de" ? 'selected/' : ''}>Deutsch</option>
-			</select>
-			`;
+				<option value="de"${current_lang == "cs" ? 'selected/' : ''}>Čeština</option>
+				<option value="it"${current_lang == "it" ? 'selected/' : ''}>Italiano</option>
+			</select>`;
 		localizable(document.getElementById("versionInfo-extension"), "version-extension");
 		document.getElementById("versionInfo-extension").innerHTML += this.extensionVersion;
 		localizable(document.getElementById("versionInfo-addon"), "version-addon");
