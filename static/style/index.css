@@ -1,6 +1,5 @@
 html,
-body,
-#map {
+body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -12,14 +11,24 @@ body,
 	cursor: default;
 }
 
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 #map {
+	width: 100%;
+	height: 100%;
 	z-index: 0;
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
-.customize.logo {
+/* TTT Header Integration - Spacing adjustments */.customize.logo {
 	position: absolute;
 	bottom: 85px;
 	left: 375px;
@@ -82,7 +91,7 @@ body,
 #topPanel {
 	background-color: #343434;
 	position: absolute;
-	top: 0;
+	top: 60px; /* Space for TTT header */
 	left: 0;
 	width: 100%;
 	height: 40px;
@@ -135,14 +144,14 @@ body,
 #rightPanel {
 	background-color: rgba(0, 0, 0, 0.75);
 	position: absolute;
-	top: 40px;
+	top: 100px; /* 60px header + 40px topPanel */
 	font-size: 14px;
 }
 
 #leftPanel {
 	left: 0;
 	width: 350px;
-	height: calc(100% - 40px - 60px);
+	height: calc(100% - 100px - 60px); /* Adjusted for header */
 }
 
 #rightPanel {

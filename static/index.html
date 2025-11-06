@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
-    <title>TTT - Replay</title>
+    <title>Replay - Tactical Training Team</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!-- PrimeIcons for header navigation -->
+    <link rel="stylesheet" href="https://unpkg.com/primeicons@7.0.0/primeicons.css" />
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/header.css" />
     <link rel="stylesheet" href="style/index.css" />
     <link rel="icon" type="img/png" href="images/favicon.png" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -29,8 +32,102 @@
     <script src="scripts/ocap.unit.js"></script>
     <script src="scripts/ocap.ui.js"></script>
     <script src="scripts/ocap.js"></script>
+    <script src="scripts/header.js"></script>
   </head>
   <body>
+    <!-- TTT Header Navigation -->
+    <header class="ttt-header">
+      <div class="ttt-header-inner">
+        <a href="https://tacticalteam.de" class="ttt-logo">
+          <img src="images/logo.png" alt="Tactical Training Team Logo" />
+        </a>
+
+        <button class="ttt-mobile-toggle" aria-label="Toggle menu">
+          <i class="pi pi-bars"></i>
+        </button>
+
+        <nav class="ttt-nav">
+          <ul class="ttt-nav-menu">
+            <li class="ttt-nav-item">
+              <a href="https://tacticalteam.de" class="ttt-nav-link">
+                <i class="pi pi-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li class="ttt-nav-item">
+              <a href="https://events.tacticalteam.de" class="ttt-nav-link" target="_blank" rel="noopener noreferrer">
+                <i class="pi pi-calendar"></i>
+                <span>Events</span>
+              </a>
+            </li>
+
+            <li class="ttt-nav-item">
+              <a href="https://discord.tacticalteam.de" class="ttt-nav-link" target="_blank" rel="noopener noreferrer">
+                <i class="pi pi-discord"></i>
+                <span>Discord</span>
+              </a>
+            </li>
+
+            <li class="ttt-nav-item">
+              <a href="ts3server://ts3.tacticalteam.de" class="ttt-nav-link">
+                <i class="pi pi-microphone"></i>
+                <span>TS3</span>
+              </a>
+            </li>
+
+            <li class="ttt-nav-item">
+              <a href="https://wiki.tacticalteam.de" class="ttt-nav-link" target="_blank" rel="noopener noreferrer">
+                <i class="pi pi-book"></i>
+                <span>Wiki</span>
+              </a>
+            </li>
+
+            <li class="ttt-nav-item">
+              <a href="https://tacticalteam.de/medien" class="ttt-nav-link">
+                <i class="pi pi-images"></i>
+                <span>Medien</span>
+              </a>
+            </li>
+
+            <li class="ttt-nav-item has-dropdown">
+              <a href="#" class="ttt-nav-link">
+                <i class="pi pi-info-circle"></i>
+                <span>Über uns</span>
+                <i class="pi pi-angle-down"></i>
+              </a>
+              <div class="ttt-dropdown">
+                <a href="https://tacticalteam.de/aufstellung" class="ttt-dropdown-item">
+                  <i class="pi pi-sitemap"></i>
+                  <span>Aufstellung</span>
+                </a>
+                <a href="https://tacticalteam.de/chronik" class="ttt-dropdown-item">
+                  <i class="pi pi-history"></i>
+                  <span>TTT-Chronik</span>
+                </a>
+                <a href="https://replay.tacticalteam.de" class="ttt-dropdown-item active" target="_blank" rel="noopener noreferrer">
+                  <i class="pi pi-play"></i>
+                  <span>Event-Replay</span>
+                </a>
+                <a href="https://tacticalteam.myspreadshop.de" class="ttt-dropdown-item" target="_blank" rel="noopener noreferrer">
+                  <i class="pi pi-shopping-bag"></i>
+                  <span>Shop</span>
+                </a>
+                <a href="https://tacticalteam.de/intern" class="ttt-dropdown-item">
+                  <i class="pi pi-user"></i>
+                  <span>Intern</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://tacticalteam.de/mitmachen" class="ttt-cta-button">
+            Mitmachen
+          </a>
+        </nav>
+      </div>
+    </header>
+
     <div id="container">
       <div id="map"></div>
       <div id="topPanel">
