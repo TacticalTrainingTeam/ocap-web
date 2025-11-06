@@ -1,6 +1,27 @@
 // TTT Header Navigation Script
 
-document.addEventListener('DOMContentLoaded', function() {
+// Load header HTML from external file
+(function loadHeader() {
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load header: ' + response.status);
+      }
+      return response.text();
+    })
+    .then(html => {
+      const container = document.getElementById('ttt-header-container');
+      if (container) {
+        container.innerHTML = html;
+        initializeHeaderBehavior();
+      }
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+    });
+})();
+
+function initializeHeaderBehavior() {
   // Mobile menu toggle
   const mobileToggle = document.querySelector('.ttt-mobile-toggle');
   const nav = document.querySelector('.ttt-nav');
@@ -33,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth <= 768) {
       const isClickInsideHeader = event.target.closest('.ttt-header');
 
-      if (!isClickInsideHeader && nav && nav.classList.contains('active')) {
+      if (!isClickInsideHeader && nav?.classList.contains('active')) {
         nav.classList.remove('active');
       }
     }
@@ -54,4 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, 250);
   });
-});
+}
+
