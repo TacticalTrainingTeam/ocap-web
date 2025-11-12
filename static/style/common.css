@@ -1,11 +1,30 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,700';
+/* Font Imports */
+@import url('https://fonts.bunny.net/css?family=ubuntu:400,500,700|ubuntu-mono:400,700|rubik:400,500,600,700|raleway:400,500,600,700');
+
+/* Font Classes */
+:root {
+	--font-sans: Ubuntu, ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'Ubuntu Mono', ui-monospace, monospace;
+	--font-heading: Rubik, var(--font-sans);
+	--font-logo: Raleway, var(--font-sans);
+}
 
 body {
 	width:100%;
 	height:100%;
 	margin:0;
 	padding:0;
-	font-family: Roboto, Arial, sans-serif;
+	font-family: var(--font-sans);
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+}
+
+/* Monospace Elements */
+code, pre, kbd, samp, .font-mono {
+	font-family: var(--font-mono);
 }
 ::-webkit-scrollbar {
 	width: 8px;
