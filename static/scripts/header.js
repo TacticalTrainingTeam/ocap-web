@@ -5,7 +5,7 @@
   try {
     const response = await fetch('header.html');
     if (!response.ok) throw new Error(`Failed to load header: ${response.status}`);
-    
+
     const container = document.getElementById('ttt-header-container');
     if (container) {
       container.innerHTML = await response.text();

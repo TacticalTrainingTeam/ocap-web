@@ -196,7 +196,7 @@
 
 @media (max-width: 768px) {
   .ttt-mobile-toggle { display: block; }
-  
+
   .ttt-nav {
     position: absolute;
     inset: 100% 0 auto 0;
@@ -206,22 +206,22 @@
     display: none;
     flex-direction: column;
   }
-  
+
   .ttt-nav.active { display: flex; }
-  
+
   .ttt-nav-menu {
     flex-direction: column;
     width: 100%;
     gap: 4px;
   }
-  
+
   .ttt-nav-item,
   .ttt-nav-link {
     width: 100%;
   }
-  
+
   .ttt-nav-link { justify-content: flex-start; }
-  
+
   .ttt-dropdown {
     position: static;
     display: none;
@@ -231,14 +231,14 @@
     margin: 4px 0 0 16px;
     padding: 0;
   }
-  
+
   .ttt-nav-item.has-dropdown.active .ttt-dropdown { display: block; }
-  
+
   .ttt-cta-button {
     margin: 16px 0 0;
     width: 100%;
   }
-  
+
   .ttt-header-inner { flex-wrap: wrap; }
   .ttt-logo { margin-right: auto; }
 }
